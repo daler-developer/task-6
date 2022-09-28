@@ -17,4 +17,8 @@ app.post("/api/csv", (req, res) => {
   });
 });
 
+app.get("/*", (req, res) => {
+  return res.sendFile(path.join(__dirname, "build", "index.html"));
+});
+
 app.listen(process.env.POST || 4000);
