@@ -3,8 +3,8 @@ import create from "zustand";
 const useStore = create((set) => ({
   region: "england",
   page: 1,
-  inaccurateNumErrors: 1,
-  seed: "test",
+  inaccurateNumErrors: 0,
+  seed: "",
 
   setRegion(to) {
     set(() => ({ region: to }));
