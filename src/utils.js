@@ -172,8 +172,10 @@ const makeErrorsInRecord = ({ record, numErrors }) => {
       Object.keys(record)[
         randomIntFromInterval(0, Object.keys(record).length - 1)
       ];
+    // const field = "id";
 
     const errorType = ["remove", "add", "swap"][randomIntFromInterval(0, 2)];
+    // const errorType = "add";
 
     switch (errorType) {
       case "remove":
