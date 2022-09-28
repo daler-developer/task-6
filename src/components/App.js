@@ -16,6 +16,11 @@ import axios from "axios";
 
 const columns = [
   {
+    title: "№",
+    dataIndex: "index",
+    key: "index",
+  },
+  {
     title: "ID",
     dataIndex: "id",
     key: "id",
@@ -136,6 +141,7 @@ export default () => {
           className="grow"
           onChange={(e) => setSeed(e.target.value)}
           value={seed}
+          placeholder="Seed"
         />
         <Button onClick={handleLoadCSV} type="primary">
           Load CSV
@@ -148,7 +154,7 @@ export default () => {
       <Table
         className="mt-[20px]"
         pagination={false}
-        dataSource={data.map((item, i) => ({ ...item, key: i }))}
+        dataSource={data.map((item, i) => ({ index: i + 1, ...item, key: i }))}
         columns={columns}
       />
     </div>

@@ -174,7 +174,6 @@ const makeErrorsInRecord = ({ record, numErrors }) => {
       ];
 
     const errorType = ["remove", "add", "swap"][randomIntFromInterval(0, 2)];
-    // const errorType = "swap";
 
     switch (errorType) {
       case "remove":
@@ -197,7 +196,7 @@ export const getRandomData = () => {
 
   const numberOfRows = page === 1 ? 20 : 10;
 
-  const data = [];
+  let data = [];
 
   for (let i = 0; i < numberOfRows; i++) {
     const record = {};
