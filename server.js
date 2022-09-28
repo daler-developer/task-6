@@ -17,6 +17,8 @@ app.post("/api/csv", (req, res) => {
   });
 });
 
+app.use(express.static(path.join(__dirname, "build")));
+
 app.get("/*", (req, res) => {
   return res.sendFile(path.join(__dirname, "build", "index.html"));
 });
