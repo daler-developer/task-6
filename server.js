@@ -23,4 +23,4 @@ app.get("/*", (req, res) => {
   return res.sendFile(path.join(__dirname, "build", "index.html"));
 });
 
-app.listen(process.env.POST || 4000);
+app.listen(process.env.PORT || 4000);
